@@ -54,4 +54,5 @@ var maxProfit = function(prices) {
     return maxProfit;
 };
 
+// by Utilizing Infinity, we can return new min price in iteration after loop, no matter what it is.
 
