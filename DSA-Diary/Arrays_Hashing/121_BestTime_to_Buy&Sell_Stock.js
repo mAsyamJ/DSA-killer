@@ -55,4 +55,5 @@ var maxProfit = function(prices) {
 };
 
 // by Utilizing Infinity, we can return new min price in iteration after loop, no matter what it is.
-
+// And with maxProfit=Math.max(maxProfit, prices[i]-minPrice); function, we automatically search the largest gap number between prices[i
+// and minPrice each iteration of loop
