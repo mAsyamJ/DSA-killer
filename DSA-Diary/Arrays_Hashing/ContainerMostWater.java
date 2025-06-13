@@ -32,3 +32,27 @@ class Solution {
 
 // Better solution with Two Pointers from left and right side
 // // O(n) Complexity
+
+class Solution {
+    public int maxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int max = 0;
+
+        while (left < right) {
+            int h = Math.min(height[left], height[right]);
+            int w = right - left;
+            int area = h * w;
+            max = Math.max(max, area);
+
+            // Move the pointer that's shorter
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return max;
+    }
+}
